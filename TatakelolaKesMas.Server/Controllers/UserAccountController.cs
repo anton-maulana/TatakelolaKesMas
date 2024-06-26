@@ -10,10 +10,10 @@ using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using TatakelolaKesMas.Core.Models.Account;
 using TatakelolaKesMas.Core.Services.Account;
-using QuickApp.Server.Authorization;
-using QuickApp.Server.ViewModels.Account;
+using TatakelolaKesMas.Server.Authorization;
+using TatakelolaKesMas.ViewModels.Account;
 
-namespace QuickApp.Server.Controllers
+namespace TatakelolaKesMas.Controllers
 {
     [Route("api/account")]
     [Authorize]

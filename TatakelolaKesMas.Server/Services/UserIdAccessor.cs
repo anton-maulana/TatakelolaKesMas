@@ -4,11 +4,11 @@
 // (c) 2024 www.ebenmonney.com/mit-license
 // ---------------------------------------
 
-using TatakelolaKesMas.Core.Services.Account;
 using System.Security.Claims;
+using TatakelolaKesMas.Core.Services.Account;
 using static OpenIddict.Abstractions.OpenIddictConstants;
 
-namespace QuickApp.Server.Services
+namespace TatakelolaKesMas.Server.Services
 {
     public class UserIdAccessor(IHttpContextAccessor httpContextAccessor) : IUserIdAccessor
     {

@@ -4,7 +4,7 @@
 // (c) 2024 www.ebenmonney.com/mit-license
 // ---------------------------------------
 
-namespace QuickApp.Server.Configuration
+namespace TatakelolaKesMas.Server.Configuration
 {
     public class AppSettings
     {

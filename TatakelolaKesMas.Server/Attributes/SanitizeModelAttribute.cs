@@ -6,7 +6,7 @@
 
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace QuickApp.Server.Attributes
+namespace TatakelolaKesMas.Attributes
 {
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
     public class SanitizeModelAttribute : ActionFilterAttribute

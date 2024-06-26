@@ -6,7 +6,7 @@
 
 using FluentValidation;
 
-namespace QuickApp.Server.ViewModels.Shop
+namespace TatakelolaKesMas.ViewModels.Shop
 {
     public class CustomerVM
     {

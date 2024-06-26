@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <InvariantGlobalization>false</InvariantGlobalization>
-    <SpaRoot>..\quickapp.client</SpaRoot>
+    <SpaRoot>..\tatakelolakesmas.client</SpaRoot>
     <SpaProxyLaunchCommand>npm start</SpaProxyLaunchCommand>
     <SpaProxyServerUrl>https://localhost:4200</SpaProxyServerUrl>
     <Version>8.0.0</Version>
@@ -14,7 +14,6 @@
     <Description>ASPNET Core 8.0 - Angular 17 startup template for Quick Application Development</Description>
     <Copyright>Copyright © 2023 www.ebenmonney.com</Copyright>
     <PackageProjectUrl>https://www.ebenmonney.com/quickapp</PackageProjectUrl>
-    <RootNamespace>QuickApp.Server</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

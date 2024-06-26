@@ -7,7 +7,7 @@
 using System.Security.Claims;
 using static OpenIddict.Abstractions.OpenIddictConstants;
 
-namespace QuickApp.Server.Services
+namespace TatakelolaKesMas.Server.Services
 {
     public static class Utilities
     {

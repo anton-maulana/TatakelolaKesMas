@@ -4,9 +4,9 @@
 // (c) 2024 www.ebenmonney.com/mit-license
 // ---------------------------------------
 
-using QuickApp.Server.Authorization.Requirements;
+using TatakelolaKesMas.Server.Authorization.Requirements;
 
-namespace QuickApp.Server.Authorization
+namespace TatakelolaKesMas.Server.Authorization
 {
     /// <summary>
     /// Operation Policy to allow adding, viewing, updating and deleting general or specific user records.

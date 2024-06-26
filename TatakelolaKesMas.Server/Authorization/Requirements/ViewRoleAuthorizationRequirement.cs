@@ -7,7 +7,7 @@
 using Microsoft.AspNetCore.Authorization;
 using TatakelolaKesMas.Core.Services.Account;
 
-namespace QuickApp.Server.Authorization.Requirements
+namespace TatakelolaKesMas.Server.Authorization.Requirements
 {
     public class ViewRoleAuthorizationRequirement : IAuthorizationRequirement
     {

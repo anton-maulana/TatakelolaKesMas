@@ -4,7 +4,7 @@
 // (c) 2024 www.ebenmonney.com/mit-license
 // ---------------------------------------
 
-namespace QuickApp.Server.ViewModels.Shop
+namespace TatakelolaKesMas.ViewModels.Shop
 {
     public class OrderVM
     {

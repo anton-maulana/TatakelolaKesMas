@@ -4,11 +4,11 @@
 // (c) 2024 www.ebenmonney.com/mit-license
 // ---------------------------------------
 
+using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using TatakelolaKesMas.Core.Services.Account;
-using System.Security.Claims;
 
-namespace QuickApp.Server.Authorization.Requirements
+namespace TatakelolaKesMas.Server.Authorization.Requirements
 {
     public class AssignRolesAuthorizationRequirement : IAuthorizationRequirement
     {

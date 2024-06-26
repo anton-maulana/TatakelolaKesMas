@@ -8,10 +8,10 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using TatakelolaKesMas.Core.Services;
 using TatakelolaKesMas.Core.Services.Shop;
-using QuickApp.Server.Services.Email;
-using QuickApp.Server.ViewModels.Shop;
+using TatakelolaKesMas.Services.Email;
+using TatakelolaKesMas.ViewModels.Shop;
 
-namespace QuickApp.Server.Controllers
+namespace TatakelolaKesMas.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

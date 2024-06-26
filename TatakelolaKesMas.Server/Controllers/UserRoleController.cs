@@ -9,11 +9,10 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TatakelolaKesMas.Core.Models.Account;
 using TatakelolaKesMas.Core.Services.Account;
-using QuickApp.Server.Authorization;
-using QuickApp.Server.ViewModels.Account;
-using System.Data;
+using TatakelolaKesMas.ViewModels.Account;
+using TatakelolaKesMas.Server.Authorization;
 
-namespace QuickApp.Server.Controllers
+namespace TatakelolaKesMas.Controllers
 {
     [Route("api/account")]
     [Authorize]

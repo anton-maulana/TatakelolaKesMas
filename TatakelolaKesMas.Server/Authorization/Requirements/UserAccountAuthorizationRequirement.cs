@@ -4,12 +4,13 @@
 // (c) 2024 www.ebenmonney.com/mit-license
 // ---------------------------------------
 
+using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using TatakelolaKesMas.Core.Services.Account;
-using QuickApp.Server.Services;
-using System.Security.Claims;
+using TatakelolaKesMas.Server.Services;
+using TatakelolaKesMas.Services;
 
-namespace QuickApp.Server.Authorization.Requirements
+namespace TatakelolaKesMas.Server.Authorization.Requirements
 {
     public class UserAccountAuthorizationRequirement(string operationName) : IAuthorizationRequirement
     {

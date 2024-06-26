@@ -7,10 +7,11 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using TatakelolaKesMas.Core.Services.Account;
-using QuickApp.Server.Attributes;
-using QuickApp.Server.Services;
+using TatakelolaKesMas.Attributes;
+using TatakelolaKesMas.Server.Services;
+using TatakelolaKesMas.Services;
 
-namespace QuickApp.Server.Controllers
+namespace TatakelolaKesMas.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

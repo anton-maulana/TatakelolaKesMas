@@ -7,7 +7,7 @@
 using OpenIddict.Abstractions;
 using static OpenIddict.Abstractions.OpenIddictConstants;
 
-namespace QuickApp.Server.Configuration
+namespace TatakelolaKesMas.Server.Configuration
 {
     public static class OidcServerConfig
     {

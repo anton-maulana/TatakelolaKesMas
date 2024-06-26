@@ -8,7 +8,7 @@ using TatakelolaKesMas.Core.Infrastructure;
 
 #nullable disable
 
-namespace QuickApp.Server.Migrations
+namespace TatakelolaKesMas.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot

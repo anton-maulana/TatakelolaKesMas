@@ -15,7 +15,7 @@ using TatakelolaKesMas.Core.Services.Account;
 using System.Security.Claims;
 using static OpenIddict.Abstractions.OpenIddictConstants;
 
-namespace QuickApp.Server.Controllers
+namespace TatakelolaKesMas.Controllers
 {
     public class AuthorizationController : Controller
     {

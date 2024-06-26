@@ -4,7 +4,7 @@
 // (c) 2024 www.ebenmonney.com/mit-license
 // ---------------------------------------
 
-namespace QuickApp.Server.Authorization
+namespace TatakelolaKesMas.Server.Authorization
 {
     public static class AuthPolicies
     {

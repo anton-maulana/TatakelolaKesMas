@@ -8,9 +8,9 @@ using MailKit.Net.Smtp;
 using Microsoft.Extensions.Options;
 using MimeKit;
 using TatakelolaKesMas.Core.Services;
-using QuickApp.Server.Configuration;
+using TatakelolaKesMas.Server.Configuration;
 
-namespace QuickApp.Server.Services.Email
+namespace TatakelolaKesMas.Services.Email
 {
     public class EmailSender(IOptions<AppSettings> config, ILogger<EmailSender> logger) : IEmailSender
     {

@@ -9,10 +9,10 @@ using Microsoft.AspNetCore.Identity;
 using TatakelolaKesMas.Core.Models.Account;
 using TatakelolaKesMas.Core.Models.Shop;
 using TatakelolaKesMas.Core.Services.Account;
-using QuickApp.Server.ViewModels.Account;
-using QuickApp.Server.ViewModels.Shop;
+using TatakelolaKesMas.ViewModels.Account;
+using TatakelolaKesMas.ViewModels.Shop;
 
-namespace QuickApp.Server.Configuration
+namespace TatakelolaKesMas.Server.Configuration
 {
     public class MappingProfile : Profile
     {

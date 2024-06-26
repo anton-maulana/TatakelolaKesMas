@@ -7,7 +7,7 @@
 using TatakelolaKesMas.Core.Models.Account;
 using System.Diagnostics.CodeAnalysis;
 
-namespace QuickApp.Server.ViewModels.Account
+namespace TatakelolaKesMas.ViewModels.Account
 {
     public class PermissionVM
     {

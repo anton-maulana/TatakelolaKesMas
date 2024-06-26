@@ -7,7 +7,7 @@
 using System.Collections;
 using System.ComponentModel.DataAnnotations;
 
-namespace QuickApp.Server.Attributes
+namespace TatakelolaKesMas.Attributes
 {
     [AttributeUsage(AttributeTargets.Property)]
     public sealed class MinimumCountAttribute(int minCount, bool required = true, bool allowEmptyStringValues = false) :

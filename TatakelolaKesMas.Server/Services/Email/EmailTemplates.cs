@@ -4,7 +4,7 @@
 // (c) 2024 www.ebenmonney.com/mit-license
 // ---------------------------------------
 
-namespace QuickApp.Server.Services.Email
+namespace TatakelolaKesMas.Services.Email
 {
     public static class EmailTemplates
     {

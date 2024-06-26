@@ -5,10 +5,10 @@
 // ---------------------------------------
 
 using TatakelolaKesMas.Core.Extensions;
-using QuickApp.Server.Attributes;
+using TatakelolaKesMas.Attributes;
 using System.ComponentModel.DataAnnotations;
 
-namespace QuickApp.Server.ViewModels.Account
+namespace TatakelolaKesMas.ViewModels.Account
 {
     public class UserVM : UserBaseVM
     {

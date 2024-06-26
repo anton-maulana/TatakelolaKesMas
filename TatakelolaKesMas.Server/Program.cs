@@ -16,13 +16,13 @@ using TatakelolaKesMas.Core.Models.Account;
 using TatakelolaKesMas.Core.Services;
 using TatakelolaKesMas.Core.Services.Account;
 using TatakelolaKesMas.Core.Services.Shop;
-using QuickApp.Server.Authorization;
-using QuickApp.Server.Authorization.Requirements;
-using QuickApp.Server.Configuration;
-using QuickApp.Server.Services;
-using QuickApp.Server.Services.Email;
+using TatakelolaKesMas.Services.Email;
 using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
+using TatakelolaKesMas.Server.Authorization;
+using TatakelolaKesMas.Server.Authorization.Requirements;
+using TatakelolaKesMas.Server.Configuration;
+using TatakelolaKesMas.Server.Services;
 using static OpenIddict.Abstractions.OpenIddictConstants;
 
 var builder = WebApplication.CreateBuilder(args);

@@ -4,13 +4,14 @@
 // (c) 2024 www.ebenmonney.com/mit-license
 // ---------------------------------------
 
+using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using TatakelolaKesMas.Core.Infrastructure;
-using QuickApp.Server.Services;
-using System.Reflection;
+using TatakelolaKesMas.Server.Services;
+using TatakelolaKesMas.Services;
 
-namespace QuickApp.Server.Configuration
+namespace TatakelolaKesMas.Server.Configuration
 {
     public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<ApplicationDbContext>
     {
