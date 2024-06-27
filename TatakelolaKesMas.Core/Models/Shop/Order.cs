@@ -4,11 +4,12 @@
 // (c) 2024 www.ebenmonney.com/mit-license
 // ---------------------------------------
 
+using Model.Common;
 using TatakelolaKesMas.Core.Models.Account;
 
 namespace TatakelolaKesMas.Core.Models.Shop
 {
-    public class Order : BaseEntity
+    public class Order : BaseEntity<int>
     {
         public decimal Discount { get; set; }
         public string? Comments { get; set; }

@@ -9,41 +9,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4e03ce2-df09-44f1-a8c2-45ba9d2299fc" name="Changes" comment="use postgresql">
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Attributes/MinimumCountAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Attributes/MinimumCountAttribute.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Attributes/SanitizeModelAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Attributes/SanitizeModelAttribute.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Authorization/AuthPolicies.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Authorization/AuthPolicies.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Authorization/Requirements/AssignRolesAuthorizationRequirement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Authorization/Requirements/AssignRolesAuthorizationRequirement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Authorization/Requirements/UserAccountAuthorizationRequirement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Authorization/Requirements/UserAccountAuthorizationRequirement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Authorization/Requirements/ViewRoleAuthorizationRequirement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Authorization/Requirements/ViewRoleAuthorizationRequirement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Authorization/SwaggerAuthorizeOperationFilter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Authorization/SwaggerAuthorizeOperationFilter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Authorization/UserAccountManagementOperations.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Authorization/UserAccountManagementOperations.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Configuration/AppSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Configuration/AppSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Configuration/DesignTimeDbContextFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Configuration/DesignTimeDbContextFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Configuration/MappingProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Configuration/MappingProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Configuration/OidcServerConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Configuration/OidcServerConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Controllers/AuthorizationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Controllers/AuthorizationController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Controllers/BaseApiController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Controllers/BaseApiController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Controllers/CustomerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Controllers/CustomerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Controllers/UserAccountController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Controllers/UserAccountController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Controllers/UserRoleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Controllers/UserRoleController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Migrations/20240626083620_InitialCreate.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Migrations/20240626083620_InitialCreate.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Migrations/20240626083620_InitialCreate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Migrations/20240626083620_InitialCreate.cs" afterDir="false" />
+    <list default="true" id="f4e03ce2-df09-44f1-a8c2-45ba9d2299fc" name="Changes" comment="change namespaces">
+      <change afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/ClinicHealth.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/IModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/ItemReference.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/ItemTransaction.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/Region.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/RegionType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TatakelolaKesMas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TatakelolaKesMas/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Infrastructure/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Infrastructure/ApplicationDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/BaseEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/BaseEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/Shop/Customer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/Shop/Customer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/Shop/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/Shop/Order.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/Shop/OrderDetail.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/Shop/OrderDetail.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/Shop/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/Shop/Product.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/Shop/ProductCategory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/Shop/ProductCategory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/TatakelolaKesMas.Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/TatakelolaKesMas.Core.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Services/Email/EmailSender.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Services/Email/EmailSender.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Services/Email/EmailTemplates.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Services/Email/EmailTemplates.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Services/UserIdAccessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Services/UserIdAccessor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Services/Utilities.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Services/Utilities.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/TatakelolaKesMas.Server.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/TatakelolaKesMas.Server.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/ViewModels/Account/ClaimVM.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/ViewModels/Account/ClaimVM.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/ViewModels/Account/PermissionVM.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/ViewModels/Account/PermissionVM.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/ViewModels/Account/RoleVM.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/ViewModels/Account/RoleVM.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/ViewModels/Account/UserVMs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/ViewModels/Account/UserVMs.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/ViewModels/Shop/CustomerVM.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/ViewModels/Shop/CustomerVM.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/ViewModels/Shop/OrderVM.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/ViewModels/Shop/OrderVM.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/ViewModels/Shop/ProductVM.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/ViewModels/Shop/ProductVM.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tatakelolakesmas.client/tatakelolakesmas.client.esproj" beforeDir="false" afterPath="$PROJECT_DIR$/tatakelolakesmas.client/tatakelolakesmas.client.esproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +154,9 @@
       <updated>1719383916926</updated>
       <workItem from="1719383917983" duration="3263000" />
       <workItem from="1719389586512" duration="1146000" />
-      <workItem from="1719391565856" duration="2246000" />
+      <workItem from="1719391565856" duration="3536000" />
+      <workItem from="1719437516959" duration="395000" />
+      <workItem from="1719458687619" duration="4059000" />
     </task>
     <task id="LOCAL-00001" summary="use postgresql">
       <option name="closed" value="true" />
@@ -190,7 +174,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719391817540</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="change namespaces">
+      <option name="closed" value="true" />
+      <created>1719394203677</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1719394203677</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +192,7 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <MESSAGE value="use postgresql" />
-    <option name="LAST_COMMIT_MESSAGE" value="use postgresql" />
+    <MESSAGE value="change namespaces" />
+    <option name="LAST_COMMIT_MESSAGE" value="change namespaces" />
   </component>
 </project>

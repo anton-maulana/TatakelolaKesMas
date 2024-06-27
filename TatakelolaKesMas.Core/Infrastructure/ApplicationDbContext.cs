@@ -25,6 +25,10 @@ namespace TatakelolaKesMas.Core.Infrastructure
         public DbSet<Order> Orders { get; set; }
 
         public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<Region> Regions { get; set; }
+        public DbSet<ClinicHealth> ClinicHealths { get; set; }
+        public DbSet<ItemReference> ItemReferences { get; set; }
+        public DbSet<ItemTransaction> ItemTransactions { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

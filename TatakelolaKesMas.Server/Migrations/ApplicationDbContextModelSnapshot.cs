@@ -465,6 +465,148 @@ namespace TatakelolaKesMas.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("TatakelolaKesMas.Core.Models.ClinicHealth", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ClinicCode")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("FkRegionId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("NameHeadCenter")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("NipHeadCenter")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("UpdatedBy")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FkRegionId");
+
+                    b.ToTable("ClinicHealths");
+                });
+
+            modelBuilder.Entity("TatakelolaKesMas.Core.Models.ItemReference", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("UpdatedBy")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ItemReferences");
+                });
+
+            modelBuilder.Entity("TatakelolaKesMas.Core.Models.ItemTransaction", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("FkItemId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("NotesFromClinic")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("NotesFromHead")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("NotesFromPpk")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("QuantityDelivered")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("QuantityReceived")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("UpdatedBy")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FkItemId");
+
+                    b.ToTable("ItemTransactions");
+                });
+
             modelBuilder.Entity("TatakelolaKesMas.Core.Models.Shop.Customer", b =>
                 {
                     b.Property<int>("Id")
@@ -481,8 +623,8 @@ namespace TatakelolaKesMas.Migrations
                         .HasColumnType("character varying(50)");
 
                     b.Property<string>("CreatedBy")
-                        .HasMaxLength(40)
-                        .HasColumnType("character varying(40)");
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("timestamp with time zone");
@@ -506,8 +648,8 @@ namespace TatakelolaKesMas.Migrations
                         .HasColumnType("character varying(30)");
 
                     b.Property<string>("UpdatedBy")
-                        .HasMaxLength(40)
-                        .HasColumnType("character varying(40)");
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<DateTime>("UpdatedDate")
                         .HasColumnType("timestamp with time zone");
@@ -535,8 +677,8 @@ namespace TatakelolaKesMas.Migrations
                         .HasColumnType("character varying(500)");
 
                     b.Property<string>("CreatedBy")
-                        .HasMaxLength(40)
-                        .HasColumnType("character varying(40)");
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("timestamp with time zone");
@@ -548,8 +690,8 @@ namespace TatakelolaKesMas.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("UpdatedBy")
-                        .HasMaxLength(40)
-                        .HasColumnType("character varying(40)");
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<DateTime>("UpdatedDate")
                         .HasColumnType("timestamp with time zone");
@@ -572,8 +714,8 @@ namespace TatakelolaKesMas.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("CreatedBy")
-                        .HasMaxLength(40)
-                        .HasColumnType("character varying(40)");
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("timestamp with time zone");
@@ -594,8 +736,8 @@ namespace TatakelolaKesMas.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("UpdatedBy")
-                        .HasMaxLength(40)
-                        .HasColumnType("character varying(40)");
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<DateTime>("UpdatedDate")
                         .HasColumnType("timestamp with time zone");
@@ -621,8 +763,8 @@ namespace TatakelolaKesMas.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("CreatedBy")
-                        .HasMaxLength(40)
-                        .HasColumnType("character varying(40)");
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("timestamp with time zone");
@@ -660,8 +802,8 @@ namespace TatakelolaKesMas.Migrations
                         .HasColumnType("integer");
 
                     b.Property<string>("UpdatedBy")
-                        .HasMaxLength(40)
-                        .HasColumnType("character varying(40)");
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<DateTime>("UpdatedDate")
                         .HasColumnType("timestamp with time zone");
@@ -686,8 +828,8 @@ namespace TatakelolaKesMas.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("CreatedBy")
-                        .HasMaxLength(40)
-                        .HasColumnType("character varying(40)");
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("timestamp with time zone");
@@ -705,8 +847,8 @@ namespace TatakelolaKesMas.Migrations
                         .HasColumnType("character varying(100)");
 
                     b.Property<string>("UpdatedBy")
-                        .HasMaxLength(40)
-                        .HasColumnType("character varying(40)");
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<DateTime>("UpdatedDate")
                         .HasColumnType("timestamp with time zone");
@@ -714,6 +856,43 @@ namespace TatakelolaKesMas.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("AppProductCategories", (string)null);
+                });
+
+            modelBuilder.Entity("TatakelolaKesMas.Core.Models.Shop.Region", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("text");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("UpdatedBy")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("fkParentId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("fkParentId");
+
+                    b.ToTable("Regions");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -791,6 +970,28 @@ namespace TatakelolaKesMas.Migrations
                     b.Navigation("Authorization");
                 });
 
+            modelBuilder.Entity("TatakelolaKesMas.Core.Models.ClinicHealth", b =>
+                {
+                    b.HasOne("TatakelolaKesMas.Core.Models.Shop.Region", "Region")
+                        .WithMany()
+                        .HasForeignKey("FkRegionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Region");
+                });
+
+            modelBuilder.Entity("TatakelolaKesMas.Core.Models.ItemTransaction", b =>
+                {
+                    b.HasOne("TatakelolaKesMas.Core.Models.ItemReference", "Item")
+                        .WithMany()
+                        .HasForeignKey("FkItemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Item");
+                });
+
             modelBuilder.Entity("TatakelolaKesMas.Core.Models.Shop.Order", b =>
                 {
                     b.HasOne("TatakelolaKesMas.Core.Models.Account.ApplicationUser", "Cashier")
@@ -843,6 +1044,17 @@ namespace TatakelolaKesMas.Migrations
                     b.Navigation("Parent");
 
                     b.Navigation("ProductCategory");
+                });
+
+            modelBuilder.Entity("TatakelolaKesMas.Core.Models.Shop.Region", b =>
+                {
+                    b.HasOne("TatakelolaKesMas.Core.Models.Shop.Region", "Parent")
+                        .WithMany()
+                        .HasForeignKey("fkParentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Parent");
                 });
 
             modelBuilder.Entity("OpenIddict.EntityFrameworkCore.Models.OpenIddictEntityFrameworkCoreApplication", b =>

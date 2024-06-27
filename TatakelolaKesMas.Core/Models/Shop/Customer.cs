@@ -4,9 +4,11 @@
 // (c) 2024 www.ebenmonney.com/mit-license
 // ---------------------------------------
 
+using Model.Common;
+
 namespace TatakelolaKesMas.Core.Models.Shop
 {
-    public class Customer : BaseEntity
+    public class Customer : BaseEntity<int>
     {
         public required string Name { get; set; }
         public required string Email { get; set; }

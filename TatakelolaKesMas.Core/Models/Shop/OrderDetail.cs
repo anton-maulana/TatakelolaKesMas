@@ -4,9 +4,11 @@
 // (c) 2024 www.ebenmonney.com/mit-license
 // ---------------------------------------
 
+using Model.Common;
+
 namespace TatakelolaKesMas.Core.Models.Shop
 {
-    public class OrderDetail : BaseEntity
+    public class OrderDetail : BaseEntity<int>
     {
         public decimal UnitPrice { get; set; }
         public int Quantity { get; set; }

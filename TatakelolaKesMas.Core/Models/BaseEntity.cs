@@ -1,25 +1,13 @@
-﻿// ---------------------------------------
-// Email: quickapp@ebenmonney.com
-// Templates: www.ebenmonney.com/templates
-// (c) 2024 www.ebenmonney.com/mit-license
-// ---------------------------------------
+﻿using TatakelolaKesMas.Core.Models;
 
-using System.ComponentModel.DataAnnotations;
-
-namespace TatakelolaKesMas.Core.Models
+namespace Model.Common
 {
-    public class BaseEntity : IAuditableEntity
+    public class BaseEntity<TId> : IModel<TId>, IAuditableEntity
     {
-        public int Id { get; set; }
-
-        [MaxLength(40)]
-        public string? CreatedBy { get; set; }
-
-        [MaxLength(40)]
-        public string? UpdatedBy { get; set; }
-
-        public DateTime UpdatedDate { get; set; }
-
+        public virtual TId Id { get; set; }
         public DateTime CreatedDate { get; set; }
+        public DateTime UpdatedDate { get; set; }
+        public string CreatedBy { get; set; }
+        public string UpdatedBy { get; set; }
     }
 }
