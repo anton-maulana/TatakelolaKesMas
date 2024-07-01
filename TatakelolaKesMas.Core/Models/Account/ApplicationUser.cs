@@ -4,6 +4,7 @@
 // (c) 2024 www.ebenmonney.com/mit-license
 // ---------------------------------------
 
+using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Identity;
 using TatakelolaKesMas.Core.Models.Shop;
 
@@ -49,5 +50,8 @@ namespace TatakelolaKesMas.Core.Models.Account
         /// Demo Navigation property for orders this user has processed
         /// </summary>
         public ICollection<Order> Orders { get; } = new List<Order>();
+        [ForeignKey(nameof(FkRegionId))]
+        public Region Region { get; set; }
+        public string? FkRegionId { get; set; }
     }
 }

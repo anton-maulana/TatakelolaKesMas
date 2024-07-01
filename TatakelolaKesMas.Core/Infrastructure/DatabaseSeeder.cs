@@ -39,7 +39,7 @@ namespace TatakelolaKesMas.Core.Infrastructure
 
                 await EnsureRoleAsync(userRoleName, "Default user", []);
 
-                await CreateUserAsync("admin",
+                await CreateUserAsync("admin",      
                                       "tempP@ss123",
                                       "Inbuilt Administrator",
                                       "admin@ebenmonney.com",

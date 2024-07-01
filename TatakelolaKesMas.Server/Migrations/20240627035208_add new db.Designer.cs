@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using TatakelolaKesMas.Core.Infrastructure;
@@ -11,9 +12,11 @@ using TatakelolaKesMas.Core.Infrastructure;
 namespace TatakelolaKesMas.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240627035208_add new db")]
+    partial class addnewdb
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -405,9 +408,6 @@ namespace TatakelolaKesMas.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("boolean");
 
-                    b.Property<string>("FkRegionId")
-                        .HasColumnType("text");
-
                     b.Property<string>("FullName")
                         .HasColumnType("text");
 
@@ -457,8 +457,6 @@ namespace TatakelolaKesMas.Migrations
                         .HasColumnType("character varying(256)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("FkRegionId");
 
                     b.HasIndex("NormalizedEmail")
                         .HasDatabaseName("EmailIndex");
@@ -973,15 +971,6 @@ namespace TatakelolaKesMas.Migrations
                     b.Navigation("Application");
 
                     b.Navigation("Authorization");
-                });
-
-            modelBuilder.Entity("TatakelolaKesMas.Core.Models.Account.ApplicationUser", b =>
-                {
-                    b.HasOne("TatakelolaKesMas.Core.Models.Shop.Region", "Region")
-                        .WithMany()
-                        .HasForeignKey("FkRegionId");
-
-                    b.Navigation("Region");
                 });
 
             modelBuilder.Entity("TatakelolaKesMas.Core.Models.ClinicHealth", b =>
