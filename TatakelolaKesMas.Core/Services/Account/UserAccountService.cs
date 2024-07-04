@@ -91,6 +91,12 @@ namespace TatakelolaKesMas.Core.Services.Account
         public async Task<(bool Succeeded, string[] Errors)> CreateUserAsync(ApplicationUser user,
             IEnumerable<string> roles, string password)
         {
+            var regionExists = await _context.Regions.AnyAsync(r => r.Id == user.FkRegionId);
+            if (!regionExists)
+            {
+                throw new Exception($"Region with ID {user.FkRegionId} does not exist.");
+            }
+            
             var result = await _userManager.CreateAsync(user, password);
             if (!result.Succeeded)
                 return (false, result.Errors.Select(e => e.Description).ToArray());

@@ -5,7 +5,7 @@
 // ---------------------------------------
 
 import { NgModule, ErrorHandler } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
@@ -57,6 +57,9 @@ import { UserPreferencesComponent } from './components/controls/user-preferences
 import { UsersManagementComponent } from './components/controls/users-management.component';
 import { RolesManagementComponent } from './components/controls/roles-management.component';
 import { RoleEditorComponent } from './components/controls/role-editor.component';
+import { CommonModule } from '@angular/common';
+import {ItemsComponent} from "./components/Items/items.component";
+import {ItemService} from "./services/item.service";
 
 @NgModule({
   declarations: [
@@ -77,9 +80,11 @@ import { RoleEditorComponent } from './components/controls/role-editor.component
     EqualValidator,
     AutofocusDirective,
     BootstrapTabDirective,
-    GroupByPipe
+    GroupByPipe,
+    ItemsComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
@@ -100,7 +105,9 @@ import { RoleEditorComponent } from './components/controls/role-editor.component
     NgxDatatableModule,
     ToastaModule.forRoot(),
     NgSelectModule,
-    NgChartsModule
+    NgChartsModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     { provide: ErrorHandler, useClass: AppErrorHandler },
@@ -113,7 +120,8 @@ import { RoleEditorComponent } from './components/controls/role-editor.component
     AccountService,
     AccountEndpoint,
     LocalStoreManager,
-    OidcHelperService
+    OidcHelperService,
+    ItemService
   ],
   bootstrap: [AppComponent]
 })

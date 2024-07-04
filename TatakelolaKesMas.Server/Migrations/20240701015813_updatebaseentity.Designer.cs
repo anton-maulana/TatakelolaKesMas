@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using TatakelolaKesMas.Core.Infrastructure;
@@ -11,9 +12,11 @@ using TatakelolaKesMas.Core.Infrastructure;
 namespace TatakelolaKesMas.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240701015813_updatebaseentity")]
+    partial class updatebaseentity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -890,6 +893,7 @@ namespace TatakelolaKesMas.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("fkParentId")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -1063,7 +1067,9 @@ namespace TatakelolaKesMas.Migrations
                 {
                     b.HasOne("TatakelolaKesMas.Core.Models.Shop.Region", "Parent")
                         .WithMany()
-                        .HasForeignKey("fkParentId");
+                        .HasForeignKey("fkParentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Parent");
                 });

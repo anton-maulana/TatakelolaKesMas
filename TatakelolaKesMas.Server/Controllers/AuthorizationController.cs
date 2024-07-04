@@ -119,6 +119,7 @@ namespace TatakelolaKesMas.Controllers
             if (user.JobTitle != null) identity.SetClaim(CustomClaims.JobTitle, user.JobTitle);
             if (user.FullName != null) identity.SetClaim(CustomClaims.FullName, user.FullName);
             if (user.Configuration != null) identity.SetClaim(CustomClaims.Configuration, user.Configuration);
+            if (user.FkRegionId != null) identity.SetClaim(CustomClaims.Region, user.FkRegionId);
 
             principal.SetDestinations(GetDestinations);
 

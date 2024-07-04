@@ -19,6 +19,7 @@ import { AppTitleService } from './services/app-title.service';
 import { AuthService } from './services/auth.service';
 import { AuthGuard } from './services/auth-guard';
 import { Utilities } from './services/utilities';
+import {ItemsComponent} from "./components/Items/items.component";
 
 @Injectable()
 export class LowerCaseUrlSerializer extends DefaultUrlSerializer {
@@ -50,6 +51,7 @@ const routes: Routes = [
   { path: 'settings', component: SettingsComponent, canActivate: [AuthGuard], title: 'Settings' },
   { path: 'about', component: AboutComponent, title: 'About Us' },
   { path: 'home', redirectTo: '/', pathMatch: 'full' },
+  { path: 'items', component: ItemsComponent, canActivate: [AuthGuard], title: 'Items' },
   { path: '**', component: NotFoundComponent, title: 'Page Not Found' }
 ];
 

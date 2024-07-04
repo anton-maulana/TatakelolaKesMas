@@ -19,5 +19,6 @@ namespace TatakelolaKesMas.Core.Services.Account
 
         ///<summary>A claim that specifies the permission of an entity</summary>
         public const string Permission = "permission";
+        public const string Region = "region";
     }
 }

@@ -20,7 +20,7 @@ namespace TatakelolaKesMas.Core.Models.Shop
         public RegionType Type { get; set; }
         
         [ForeignKey("Parent")]
-        public string fkParentId { get; set; }
+        public string? fkParentId { get; set; }
         public virtual Region Parent { get; set; }
     }
 }

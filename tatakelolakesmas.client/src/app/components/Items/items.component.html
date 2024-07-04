@@ -1,0 +1,49 @@
+<header class="pageHeader">
+    <div style="display: flex; justify-content: space-between;">
+        <h3>List Barang</h3>
+        <button type="button" class="btn btn-primary" tabindex="-1" (click)="openDialog(content)">Add Item</button> 
+    </div>
+    
+</header>
+<div [@fadeInOut]>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">Kode Barang</th>
+            <th scope="col">Nama Barang</th>            
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</div>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title">Modal title</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+        <div [formGroup]="itemForm">
+            <div class="mb-3">
+                <label for="kodeBarang" class="form-label">Kode Barang</label>
+                <input type="text" class="form-control" id="kodeBarang" formControlName="kodeBarang">
+                <div *ngIf="itemForm.get('kodeBarang')?.invalid && itemForm.get('kodeBarang')?.touched" class="text-danger">
+                    Kode Barang is required.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="namaBarang" class="form-label">Nama Barang</label>
+                <input type="text" class="form-control" id="namaBarang" formControlName="namaBarang">
+                <div *ngIf="itemForm.get('namaBarang')?.invalid && itemForm.get('namaBarang')?.touched" class="text-danger">
+                    Nama Barang is required.
+                </div>
+            </div>           
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" (click)="onSubmit()" [disabled]="itemForm.invalid">Submit</button>
+    </div>
+</ng-template>

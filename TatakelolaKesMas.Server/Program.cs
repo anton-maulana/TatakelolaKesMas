@@ -19,6 +19,7 @@ using TatakelolaKesMas.Core.Services.Shop;
 using TatakelolaKesMas.Services.Email;
 using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
+using TatakelolaKesMas.Core.Services.Items;
 using TatakelolaKesMas.Server.Authorization;
 using TatakelolaKesMas.Server.Authorization.Requirements;
 using TatakelolaKesMas.Server.Configuration;
@@ -195,6 +196,7 @@ builder.Services.AddScoped<IUserRoleService, UserRoleService>();
 builder.Services.AddScoped<ICustomerService, CustomerService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IOrdersService, OrdersService>();
+builder.Services.AddScoped<IItemService, ItemService>();
 
 // Other Services
 builder.Services.AddScoped<IEmailSender, EmailSender>();

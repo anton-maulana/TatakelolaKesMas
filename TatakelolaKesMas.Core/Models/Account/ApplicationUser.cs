@@ -51,7 +51,7 @@ namespace TatakelolaKesMas.Core.Models.Account
         /// </summary>
         public ICollection<Order> Orders { get; } = new List<Order>();
         [ForeignKey(nameof(FkRegionId))]
-        public Region Region { get; set; }
+        public Region? Region { get; set; }
         public string? FkRegionId { get; set; }
     }
 }

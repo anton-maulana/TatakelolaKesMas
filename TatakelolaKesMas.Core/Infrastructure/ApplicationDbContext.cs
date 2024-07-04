@@ -42,6 +42,7 @@ namespace TatakelolaKesMas.Core.Infrastructure
                 .HasForeignKey(c => c.UserId)
                 .IsRequired()
                 .OnDelete(DeleteBehavior.Cascade);
+            
             builder.Entity<ApplicationUser>()
                 .HasMany(u => u.Roles)
                 .WithOne()
@@ -61,7 +62,13 @@ namespace TatakelolaKesMas.Core.Infrastructure
                 .HasForeignKey(r => r.RoleId)
                 .IsRequired()
                 .OnDelete(DeleteBehavior.Cascade);
-
+            
+            builder.Entity<ApplicationUser>()
+                .HasOne(r => r.Region)
+                .WithMany()
+                .HasForeignKey(r => r.FkRegionId)
+                .IsRequired(false); // Make the foreign key nullable
+            
             builder.Entity<Customer>().Property(c => c.Name).IsRequired().HasMaxLength(100);
             builder.Entity<Customer>().HasIndex(c => c.Name);
             builder.Entity<Customer>().Property(c => c.Email).HasMaxLength(100);
