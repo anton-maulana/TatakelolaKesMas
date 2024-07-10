@@ -6,7 +6,7 @@
 
 using TatakelolaKesMas.Core.Models.Account;
 
-namespace TatakelolaKesMas.Core.Services.Account
+namespace TatakelolaKesMas.Core.Services.Account.Interfaces
 {
     public interface IUserRoleService
     {

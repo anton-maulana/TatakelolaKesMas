@@ -1,0 +1,66 @@
+<header class="pageHeader">
+    <div style="display: flex; justify-content: space-between;">
+        <h3>List Barang</h3>
+        <button type="button" class="btn btn-primary" tabindex="-1" (click)="openDialog(content)">Add Item</button> 
+    </div>
+    
+</header>
+<form>
+    <div class="mb-3 row">
+        <label for="table-filtering-search" class="col-xs-3 col-sm-auto col-form-label">Cari Item:</label>
+        <div class="col-xs-3 col-sm-auto">
+            <input id="table-filtering-search" class="form-control" type="text" [formControl]="filter" />
+        </div>
+    </div>
+</form>
+<div [@fadeInOut]>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">Kode Barang</th>
+            <th scope="col">Nama Barang</th>            
+        </tr>
+        </thead>
+        <tbody>
+            @for (item of listItems$ | async; track item['name']; let i = $index) {
+                <tr>
+                    <td><ngb-highlight [result]="item['code']" [term]="filter.value" /></td>
+                    <td><ngb-highlight [result]="item['name']" [term]="filter.value" /></td>
+                </tr>
+            } @empty {
+                <tr>
+                    <td colspan="4" style="text-align: center">Item tidak ditemukan</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title">Modal title</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+        <div [formGroup]="itemForm">
+            <div class="mb-3">
+                <label for="code" class="form-label">Kode Barang</label>
+                <input type="text" class="form-control" id="code" formControlName="code">
+                <div *ngIf="itemForm.get('code')?.invalid && itemForm.get('code')?.touched" class="text-danger">
+                    Kode Barang is required.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="name" class="form-label">Nama Barang</label>
+                <input type="text" class="form-control" id="name" formControlName="name">
+                <div *ngIf="itemForm.get('name')?.invalid && itemForm.get('name')?.touched" class="text-danger">
+                    Nama Barang is required.
+                </div>
+            </div>           
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" (click)="onSubmit()" [disabled]="itemForm.invalid">Submit</button>
+    </div>
+</ng-template>

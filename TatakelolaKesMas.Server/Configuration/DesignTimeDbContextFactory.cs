@@ -28,7 +28,9 @@ namespace TatakelolaKesMas.Server.Configuration
             var builder = new DbContextOptionsBuilder<ApplicationDbContext>();
             var migrationsAssembly = typeof(Program).GetTypeInfo().Assembly.GetName().Name;
 
-            builder.UseNpgsql(configuration["ConnectionStrings:DefaultConnection"], b => b.MigrationsAssembly(migrationsAssembly));
+            builder.UseNpgsql(configuration["ConnectionStrings:DefaultConnection"],
+                    b => b.MigrationsAssembly(migrationsAssembly))
+                .UseLazyLoadingProxies();
             builder.UseOpenIddict();
 
             return new ApplicationDbContext(builder.Options, SystemUserIdAccessor.GetNewAccessor());

@@ -16,7 +16,5 @@ namespace TatakelolaKesMas.Core.Models.Shop
         public string? Address { get; set; }
         public string? City { get; set; }
         public Gender Gender { get; set; }
-
-        public ICollection<Order> Orders { get; } = new List<Order>();
     }
 }

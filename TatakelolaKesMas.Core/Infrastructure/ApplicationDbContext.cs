@@ -10,6 +10,7 @@ using TatakelolaKesMas.Core.Models;
 using TatakelolaKesMas.Core.Models.Account;
 using TatakelolaKesMas.Core.Models.Shop;
 using TatakelolaKesMas.Core.Services.Account;
+using TatakelolaKesMas.Core.Services.Account.Interfaces;
 
 namespace TatakelolaKesMas.Core.Infrastructure
 {
@@ -18,24 +19,35 @@ namespace TatakelolaKesMas.Core.Infrastructure
     {
         public DbSet<Customer> Customers { get; set; }
 
-        public DbSet<ProductCategory> ProductCategories { get; set; }
-
-        public DbSet<Product> Products { get; set; }
-
-        public DbSet<Order> Orders { get; set; }
-
-        public DbSet<OrderDetail> OrderDetails { get; set; }
+        // public DbSet<ProductCategory> ProductCategories { get; set; }
+        //
+        // public DbSet<Product> Products { get; set; }
+        //
+        // public DbSet<Order> Orders { get; set; }
+        //
+        // public DbSet<OrderDetail> OrderDetails { get; set; }
         public DbSet<Region> Regions { get; set; }
-        public DbSet<ClinicHealth> ClinicHealths { get; set; }
+        public DbSet<PublicHealthCenter> PublicHealthCenters { get; set; }
         public DbSet<ItemReference> ItemReferences { get; set; }
         public DbSet<ItemTransaction> ItemTransactions { get; set; }
-
+        
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-            const string priceDecimalType = "decimal(18,2)";
-            const string tablePrefix = "App";
-
+            
+            builder.Entity<PublicHealthCenter>()
+                .HasOne(p => p.Region)
+                .WithMany()
+                .HasForeignKey(p => p.FkRegionId);
+            
+            builder.Entity<Region>()
+                .HasOne(p => p.Parent)
+                .WithMany()
+                .HasForeignKey(p => p.FkParentId);
+            
+            // const string priceDecimalType = "decimal(18,2)";
+            
+            //
             builder.Entity<ApplicationUser>()
                 .HasMany(u => u.Claims)
                 .WithOne()
@@ -49,7 +61,7 @@ namespace TatakelolaKesMas.Core.Infrastructure
                 .HasForeignKey(r => r.UserId)
                 .IsRequired()
                 .OnDelete(DeleteBehavior.Cascade);
-
+            
             builder.Entity<ApplicationRole>()
                 .HasMany(r => r.Claims)
                 .WithOne()
@@ -62,40 +74,34 @@ namespace TatakelolaKesMas.Core.Infrastructure
                 .HasForeignKey(r => r.RoleId)
                 .IsRequired()
                 .OnDelete(DeleteBehavior.Cascade);
-            
-            builder.Entity<ApplicationUser>()
-                .HasOne(r => r.Region)
-                .WithMany()
-                .HasForeignKey(r => r.FkRegionId)
-                .IsRequired(false); // Make the foreign key nullable
-            
-            builder.Entity<Customer>().Property(c => c.Name).IsRequired().HasMaxLength(100);
-            builder.Entity<Customer>().HasIndex(c => c.Name);
-            builder.Entity<Customer>().Property(c => c.Email).HasMaxLength(100);
-            builder.Entity<Customer>().Property(c => c.PhoneNumber).IsUnicode(false).HasMaxLength(30);
-            builder.Entity<Customer>().Property(c => c.City).HasMaxLength(50);
-            builder.Entity<Customer>().ToTable($"{tablePrefix}{nameof(Customers)}");
+            //
+            // builder.Entity<Customer>().Property(c => c.Name).IsRequired().HasMaxLength(100);
+            // builder.Entity<Customer>().HasIndex(c => c.Name);
+            // builder.Entity<Customer>().Property(c => c.Email).HasMaxLength(100);
+            // builder.Entity<Customer>().Property(c => c.PhoneNumber).IsUnicode(false).HasMaxLength(30);
+            // builder.Entity<Customer>().Property(c => c.City).HasMaxLength(50);
+            // builder.Entity<Customer>().ToTable($"{tablePrefix}{nameof(Customers)}");
 
-            builder.Entity<ProductCategory>().Property(p => p.Name).IsRequired().HasMaxLength(100);
-            builder.Entity<ProductCategory>().Property(p => p.Description).HasMaxLength(500);
-            builder.Entity<ProductCategory>().ToTable($"{tablePrefix}{nameof(ProductCategories)}");
-
-            builder.Entity<Product>().Property(p => p.Name).IsRequired().HasMaxLength(100);
-            builder.Entity<Product>().HasIndex(p => p.Name);
-            builder.Entity<Product>().Property(p => p.Description).HasMaxLength(500);
-            builder.Entity<Product>().Property(p => p.Icon).IsUnicode(false).HasMaxLength(256);
-            builder.Entity<Product>().HasOne(p => p.Parent).WithMany(p => p.Children).OnDelete(DeleteBehavior.Restrict);
-            builder.Entity<Product>().Property(p => p.BuyingPrice).HasColumnType(priceDecimalType);
-            builder.Entity<Product>().Property(p => p.SellingPrice).HasColumnType(priceDecimalType);
-            builder.Entity<Product>().ToTable($"{tablePrefix}{nameof(Products)}");
-
-            builder.Entity<Order>().Property(o => o.Comments).HasMaxLength(500);
-            builder.Entity<Order>().Property(p => p.Discount).HasColumnType(priceDecimalType);
-            builder.Entity<Order>().ToTable($"{tablePrefix}{nameof(Orders)}");
-
-            builder.Entity<OrderDetail>().Property(p => p.UnitPrice).HasColumnType(priceDecimalType);
-            builder.Entity<OrderDetail>().Property(p => p.Discount).HasColumnType(priceDecimalType);
-            builder.Entity<OrderDetail>().ToTable($"{tablePrefix}{nameof(OrderDetails)}");
+            // builder.Entity<ProductCategory>().Property(p => p.Name).IsRequired().HasMaxLength(100);
+            // builder.Entity<ProductCategory>().Property(p => p.Description).HasMaxLength(500);
+            // builder.Entity<ProductCategory>().ToTable($"{tablePrefix}{nameof(ProductCategories)}");
+            //
+            // builder.Entity<Product>().Property(p => p.Name).IsRequired().HasMaxLength(100);
+            // builder.Entity<Product>().HasIndex(p => p.Name);
+            // builder.Entity<Product>().Property(p => p.Description).HasMaxLength(500);
+            // builder.Entity<Product>().Property(p => p.Icon).IsUnicode(false).HasMaxLength(256);
+            // builder.Entity<Product>().HasOne(p => p.Parent).WithMany(p => p.Children).OnDelete(DeleteBehavior.Restrict);
+            // builder.Entity<Product>().Property(p => p.BuyingPrice).HasColumnType(priceDecimalType);
+            // builder.Entity<Product>().Property(p => p.SellingPrice).HasColumnType(priceDecimalType);
+            // builder.Entity<Product>().ToTable($"{tablePrefix}{nameof(Products)}");
+            //
+            // builder.Entity<Order>().Property(o => o.Comments).HasMaxLength(500);
+            // builder.Entity<Order>().Property(p => p.Discount).HasColumnType(priceDecimalType);
+            // builder.Entity<Order>().ToTable($"{tablePrefix}{nameof(Orders)}");
+            //
+            // builder.Entity<OrderDetail>().Property(p => p.UnitPrice).HasColumnType(priceDecimalType);
+            // builder.Entity<OrderDetail>().Property(p => p.Discount).HasColumnType(priceDecimalType);
+            // builder.Entity<OrderDetail>().ToTable($"{tablePrefix}{nameof(OrderDetails)}");
         }
 
         public override int SaveChanges()

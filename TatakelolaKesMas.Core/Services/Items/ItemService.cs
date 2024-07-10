@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using TatakelolaKesMas.Core.Infrastructure;
 using TatakelolaKesMas.Core.Models;
+using TatakelolaKesMas.Core.Services.Items.Interfaces;
 using TatakelolaKesMas.Core.Services.Shop;
 
 namespace TatakelolaKesMas.Core.Services.Items

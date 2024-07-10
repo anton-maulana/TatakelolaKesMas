@@ -6,7 +6,7 @@
 
 using TatakelolaKesMas.Core.Models.Account;
 
-namespace TatakelolaKesMas.Core.Services.Account
+namespace TatakelolaKesMas.Core.Services.Account.Interfaces
 {
     public interface IUserAccountService
     {
@@ -21,7 +21,7 @@ namespace TatakelolaKesMas.Core.Services.Account
         Task<IList<string>> GetUserRolesAsync(ApplicationUser user);
         Task<List<(ApplicationUser User, string[] Roles)>> GetUsersAndRolesAsync(int page, int pageSize);
         Task<(bool Succeeded, string[] Errors)> ResetPasswordAsync(ApplicationUser user, string newPassword);
-        Task<(bool Success, string[] Errors)> TestCanDeleteUserAsync(string userId);
+        // Task<(bool Success, string[] Errors)> TestCanDeleteUserAsync(string userId);
         Task<(bool Succeeded, string[] Errors)> UpdatePasswordAsync(ApplicationUser user, string currentPassword, string newPassword);
         Task<(bool Succeeded, string[] Errors)> UpdateUserAsync(ApplicationUser user);
         Task<(bool Succeeded, string[] Errors)> UpdateUserAsync(ApplicationUser user, IEnumerable<string>? roles);

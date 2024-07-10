@@ -14,6 +14,6 @@ public class ItemTransaction : BaseEntity<int>
     public string NotesFromClinic { get; set; }
     
     [ForeignKey(nameof(FkItemId))]
-    public ItemReference Item { get; set; }
+    public virtual ItemReference Item { get; set; }
     public int FkItemId { get; set; }
 }

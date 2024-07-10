@@ -4,7 +4,7 @@
 // (c) 2024 www.ebenmonney.com/mit-license
 // ---------------------------------------
 
-namespace TatakelolaKesMas.Core.Services.Shop
+namespace TatakelolaKesMas.Core.Services.Shop.Interfaces
 {
     public interface IProductService
     {

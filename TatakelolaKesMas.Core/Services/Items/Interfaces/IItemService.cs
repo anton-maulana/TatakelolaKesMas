@@ -6,7 +6,7 @@
 
 using TatakelolaKesMas.Core.Models;
 
-namespace TatakelolaKesMas.Core.Services.Shop
+namespace TatakelolaKesMas.Core.Services.Items.Interfaces
 {
     public interface IItemService
     {

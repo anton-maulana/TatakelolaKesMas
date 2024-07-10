@@ -19,7 +19,14 @@ using TatakelolaKesMas.Core.Services.Shop;
 using TatakelolaKesMas.Services.Email;
 using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
+using System.Text.Json.Serialization;
+using TatakelolaKesMas.Core.Services.Account.Interfaces;
+using TatakelolaKesMas.Core.Services.Interfaces;
 using TatakelolaKesMas.Core.Services.Items;
+using TatakelolaKesMas.Core.Services.Items.Interfaces;
+using TatakelolaKesMas.Core.Services.PublicHealthCentre;
+using TatakelolaKesMas.Core.Services.PublicHealthCentre.Interfaces;
+using TatakelolaKesMas.Core.Services.Shop.Interfaces;
 using TatakelolaKesMas.Server.Authorization;
 using TatakelolaKesMas.Server.Authorization.Requirements;
 using TatakelolaKesMas.Server.Configuration;
@@ -37,7 +44,9 @@ var migrationsAssembly = typeof(Program).GetTypeInfo().Assembly.GetName().Name;
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
-    options.UseNpgsql(connectionString, b => b.MigrationsAssembly(migrationsAssembly));
+    options
+        .UseNpgsql(connectionString, b => b.MigrationsAssembly(migrationsAssembly))
+        .UseLazyLoadingProxies();
     options.UseOpenIddict();
 });
 
@@ -139,12 +148,12 @@ builder.Services.AddOpenIddict()
         options.UseAspNetCore();
     });
 
-builder.Services.AddAuthentication(o =>
-{
-    o.DefaultScheme = OpenIddictValidationAspNetCoreDefaults.AuthenticationScheme;
-    o.DefaultAuthenticateScheme = OpenIddictValidationAspNetCoreDefaults.AuthenticationScheme;
-    o.DefaultChallengeScheme = OpenIddictValidationAspNetCoreDefaults.AuthenticationScheme;
-});
+    builder.Services.AddAuthentication(o =>
+    {
+        o.DefaultScheme = OpenIddictValidationAspNetCoreDefaults.AuthenticationScheme;
+        o.DefaultAuthenticateScheme = OpenIddictValidationAspNetCoreDefaults.AuthenticationScheme;
+        o.DefaultChallengeScheme = OpenIddictValidationAspNetCoreDefaults.AuthenticationScheme;
+    });
 
 builder.Services.AddAuthorizationBuilder()
     .AddPolicy(AuthPolicies.ViewAllUsersPolicy,
@@ -163,7 +172,14 @@ builder.Services.AddAuthorizationBuilder()
 // Add cors
 builder.Services.AddCors();
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+        options.JsonSerializerOptions.MaxDepth = 32; // Increase the depth limit if necessary
+    });
+
+
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -197,6 +213,8 @@ builder.Services.AddScoped<ICustomerService, CustomerService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IOrdersService, OrdersService>();
 builder.Services.AddScoped<IItemService, ItemService>();
+builder.Services.AddScoped<IPublicHealthCenterService, PublicHealthCenterService>();
+builder.Services.AddScoped<IRegionService, RegionService>();
 
 // Other Services
 builder.Services.AddScoped<IEmailSender, EmailSender>();

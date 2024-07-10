@@ -6,11 +6,11 @@
 
 using TatakelolaKesMas.Core.Models.Shop;
 
-namespace TatakelolaKesMas.Core.Services.Shop
+namespace TatakelolaKesMas.Core.Services.Shop.Interfaces
 {
     public interface ICustomerService
     {
         IEnumerable<Customer> GetTopActiveCustomers(int count);
-        IEnumerable<Customer> GetAllCustomersData();
+        // IEnumerable<Customer> GetAllCustomersData();
     }
 }

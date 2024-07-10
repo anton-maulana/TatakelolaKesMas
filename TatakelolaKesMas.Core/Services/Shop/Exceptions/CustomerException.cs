@@ -4,7 +4,7 @@
 // (c) 2024 www.ebenmonney.com/mit-license
 // ---------------------------------------
 
-namespace TatakelolaKesMas.Core.Services.Shop
+namespace TatakelolaKesMas.Core.Services.Shop.Exceptions
 {
     /// <summary>
     /// Represents errors that occur with customer related operations.

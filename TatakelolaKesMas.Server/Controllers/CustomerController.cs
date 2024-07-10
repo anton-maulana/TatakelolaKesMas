@@ -8,6 +8,8 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using TatakelolaKesMas.Core.Services;
 using TatakelolaKesMas.Core.Services.Shop;
+using TatakelolaKesMas.Core.Services.Shop.Exceptions;
+using TatakelolaKesMas.Core.Services.Shop.Interfaces;
 using TatakelolaKesMas.Services.Email;
 using TatakelolaKesMas.ViewModels.Shop;
 
@@ -31,12 +33,12 @@ namespace TatakelolaKesMas.Controllers
             _customerService = customerService;
         }
 
-        [HttpGet]
-        public IActionResult Get()
-        {
-            var allCustomers = _customerService.GetAllCustomersData();
-            return Ok(_mapper.Map<IEnumerable<CustomerVM>>(allCustomers));
-        }
+        // [HttpGet]
+        // public IActionResult Get()
+        // {
+        //     var allCustomers = _customerService.GetAllCustomersData();
+        //     return Ok(_mapper.Map<IEnumerable<CustomerVM>>(allCustomers));
+        // }
 
         [HttpGet("throw")]
         public IEnumerable<CustomerVM> Throw()

@@ -4,7 +4,7 @@
 // (c) 2024 www.ebenmonney.com/mit-license
 // ---------------------------------------
 
-namespace TatakelolaKesMas.Core.Services.Account
+namespace TatakelolaKesMas.Core.Services.Account.Interfaces
 {
     public interface IUserIdAccessor
     {

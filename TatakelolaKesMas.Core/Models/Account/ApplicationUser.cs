@@ -39,19 +39,19 @@ namespace TatakelolaKesMas.Core.Models.Account
         /// <summary>
         /// Navigation property for the roles this user belongs to.
         /// </summary>
-        public ICollection<IdentityUserRole<string>> Roles { get; } = new List<IdentityUserRole<string>>();
+        public virtual ICollection<IdentityUserRole<string>> Roles { get; } = new List<IdentityUserRole<string>>();
 
         /// <summary>
         /// Navigation property for the claims this user possesses.
         /// </summary>
-        public ICollection<IdentityUserClaim<string>> Claims { get; } = new List<IdentityUserClaim<string>>();
+        public virtual ICollection<IdentityUserClaim<string>> Claims { get; } = new List<IdentityUserClaim<string>>();
 
         /// <summary>
         /// Demo Navigation property for orders this user has processed
         /// </summary>
-        public ICollection<Order> Orders { get; } = new List<Order>();
+        // public virtual ICollection<Order> Orders { get; } = new List<Order>();
         [ForeignKey(nameof(FkRegionId))]
-        public Region? Region { get; set; }
+        public virtual Region? Region { get; set; }
         public string? FkRegionId { get; set; }
     }
 }

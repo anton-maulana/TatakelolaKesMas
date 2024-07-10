@@ -10,34 +10,105 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4e03ce2-df09-44f1-a8c2-45ba9d2299fc" name="Changes" comment="change">
-      <change afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/EnumCode/BaseEnumCode.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/EnumCode/RoleNameEnum.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Items/Interfaces/IItemService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Items/ItemService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Controllers/ItemController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tatakelolakesmas.client/src/app/components/Items/items.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tatakelolakesmas.client/src/app/components/Items/items.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tatakelolakesmas.client/src/app/components/Items/items.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tatakelolakesmas.client/src/app/models/item.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tatakelolakesmas.client/src/app/services/item.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Helpers/NotImportedAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Interfaces/IRegionService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/PublicHealthCentre/Interfaces/IPublicHealthCenterService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/PublicHealthCentre/PublicHealthCenterService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/RegionService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Controllers/PublicHealthCentreController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Controllers/RegionController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/ViewModels/ItemReference/ItemVM.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tatakelolakesmas.client/src/app/components/Items/item-reference.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tatakelolakesmas.client/src/app/components/public-health-center/public-health-center.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tatakelolakesmas.client/src/app/components/public-health-center/public-health-center.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tatakelolakesmas.client/src/app/models/public-health-center.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tatakelolakesmas.client/src/app/models/region.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tatakelolakesmas.client/src/app/services/public-health-centre.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tatakelolakesmas.client/src/app/services/region.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tatakelolakesmas.client/src/assets/article-1-BphnCxAC.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tatakelolakesmas.client/src/assets/article-2-CvMhz_MQ.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tatakelolakesmas.client/src/assets/article-3-sgsiYsJZ.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tatakelolakesmas.client/src/assets/index-D0PJ_lds.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tatakelolakesmas.client/src/assets/index-DWIHHAql.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tatakelolakesmas.client/src/assets/react-CHdo91hT.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tatakelolakesmas.client/src/assets/user-01-4yq2_uH2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tatakelolakesmas.client/src/assets/user-02-C7efGC9p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tatakelolakesmas.client/src/assets/user-03-CX0CjwG5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tatakelolakesmas.client/src/assets/user-04-CEXG_9cF.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TatakelolaKesMas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TatakelolaKesMas/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Infrastructure/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Infrastructure/ApplicationDbContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Infrastructure/DatabaseSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Infrastructure/DatabaseSeeder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/Account/ApplicationRole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/Account/ApplicationRole.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/Account/ApplicationUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/Account/ApplicationUser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/BaseEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/BaseEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/ClinicHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/PublicHealthCenter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/ItemTransaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/ItemTransaction.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/Region.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/Region.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Account/CustomClaims.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Account/CustomClaims.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/Shop/Customer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/Shop/Customer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/Shop/Order.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/Shop/OrderDetail.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/Shop/Product.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Models/Shop/ProductCategory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Account/Exceptions/UserAccountException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Account/Exceptions/UserAccountException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Account/Exceptions/UserNotFoundException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Account/Exceptions/UserNotFoundException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Account/Exceptions/UserRoleException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Account/Exceptions/UserRoleException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Account/Interfaces/IUserAccountService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Account/Interfaces/IUserAccountService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Account/Interfaces/IUserIdAccessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Account/Interfaces/IUserIdAccessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Account/Interfaces/IUserRoleService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Account/Interfaces/IUserRoleService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Account/UserAccountService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Account/UserAccountService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/TatakelolaKesMas.Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/TatakelolaKesMas.Core.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Controllers/AuthorizationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Controllers/AuthorizationController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Account/UserRoleService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Account/UserRoleService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Items/Interfaces/IItemService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Items/Interfaces/IItemService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Items/ItemService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Items/ItemService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Shop/CustomerService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Shop/CustomerService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Shop/Exceptions/CustomerException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Shop/Exceptions/CustomerException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Shop/Interfaces/ICustomerService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Shop/Interfaces/ICustomerService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Shop/Interfaces/IOrdersService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Shop/Interfaces/IOrdersService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Shop/Interfaces/IProductService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Shop/Interfaces/IProductService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Shop/OrdersService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Shop/OrdersService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Shop/ProductService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Shop/ProductService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Configuration/DesignTimeDbContextFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Configuration/DesignTimeDbContextFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Configuration/MappingProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Configuration/MappingProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Controllers/BaseApiController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Controllers/BaseApiController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Controllers/CustomerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Controllers/CustomerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Controllers/ItemController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Controllers/ItemController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Controllers/UserAccountController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Controllers/UserAccountController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Controllers/UserRoleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Controllers/UserRoleController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Migrations/20240626083620_InitialCreate.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Migrations/20240626083620_InitialCreate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Migrations/20240627034456_add transaction.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Migrations/20240627034456_add transaction.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Migrations/20240627035208_add new db.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Migrations/20240627035208_add new db.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Migrations/20240701012445_AddFkRegionInUser.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Migrations/20240701012445_AddFkRegionInUser.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Migrations/20240701015813_updatebaseentity.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Migrations/20240701015813_updatebaseentity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Migrations/20240701102047_AllowFkRegionIdIsNUll.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Migrations/20240701102047_AllowFkRegionIdIsNUll.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Migrations/20240701102459_AllowFkRegionIdIsNulled.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Migrations/20240701102459_AllowFkRegionIdIsNulled.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Migrations/20240703084348_AddFkRegionInUsers.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Migrations/20240703084348_AddFkRegionInUsers.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Migrations/20240703084802_AddFkRegionInUsers3.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Migrations/20240703084802_AddFkRegionInUsers3.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/Services/UserIdAccessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Services/UserIdAccessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/TatakelolaKesMas.Server.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/TatakelolaKesMas.Server.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/appsettings.Development.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TatakelolaKesMas.Server/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/TatakelolaKesMas.Server/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tatakelolakesmas.client/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tatakelolakesmas.client/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tatakelolakesmas.client/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/tatakelolakesmas.client/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tatakelolakesmas.client/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tatakelolakesmas.client/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tatakelolakesmas.client/src/app/components/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/tatakelolakesmas.client/src/app/components/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tatakelolakesmas.client/src/app/components/Items/items.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tatakelolakesmas.client/src/app/components/Items/items.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/tatakelolakesmas.client/src/app/components/Items/item-reference.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tatakelolakesmas.client/src/app/components/Items/items.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tatakelolakesmas.client/src/app/components/Items/item-reference.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tatakelolakesmas.client/src/app/components/orders/orders.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tatakelolakesmas.client/src/app/components/orders/orders.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/tatakelolakesmas.client/src/app/components/public-health-center/public-health-center.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tatakelolakesmas.client/src/app/components/orders/orders.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tatakelolakesmas.client/src/app/components/products/products.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tatakelolakesmas.client/src/app/components/products/products.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tatakelolakesmas.client/src/app/components/products/products.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tatakelolakesmas.client/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tatakelolakesmas.client/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,13 +129,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///WORKSPACES/WORKSPACES/TatakelolaKesMas/TatakelolaKesMas.Core/Infrastructure/ApplicationDbContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///WORKSPACES/WORKSPACES/TatakelolaKesMas/TatakelolaKesMas.Core/Infrastructure/DatabaseSeeder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TatakelolaKesMas.Core/obj/Debug/net8.0/QuickApp.Core.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/tatakelolakesmas.client/package-lock.json" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/55a14297281f48578df31f18853fc1bb1ae30/fd/09a1b57f/ProxyBindingRewriter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5f9bc6d1d54b416fb251b81fcb6dfe49c2d000/3d/b451556f/Attribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5f9bc6d1d54b416fb251b81fcb6dfe49c2d000/3d/b63afedb/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6090dad8e1674e0d829d558fc13952bf1dea00/60/adadf14b/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a6ca83fd68634bcf88b36fa07a3599b426a020/f0/fe8b6706/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3e1beecd653485b1deb7561c9360f17cdf93ce222c59548f021503eb07450/UserManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7279bc74cb2c8febe4cb4b412fc19a84928960455e6e138aadc42557725f54/ClaimsIdentityOptions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b9ba29dc4c1091d4ed28afd986731bea6c7f69fe617924c2e5f938e97d5d9a6/OpenIddictConstants.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c047fc6ebc23320511c2a9f9f9288a136ed91576d425e55bb725219d305959/IdentityOptions.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -77,30 +150,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.TatakelolaKesMas.Server: http.executor": "Debug",
-    ".NET Launch Settings Profile.TatakelolaKesMas.Server: https.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "XThreadsFramesViewSplitterKey": "0.43457943",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/WORKSPACES/WORKSPACES/QuickApp/QuickApp.sln",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "/WORKSPACES/WORKSPACES/TatakelolaKesMas/tatakelolakesmas.client/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.TatakelolaKesMas.Server: http.executor&quot;: &quot;Debug&quot;,
+    &quot;.NET Launch Settings Profile.TatakelolaKesMas.Server: https.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.43457943&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/WORKSPACES/WORKSPACES/sehati/Sehati.sln&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;HotReloadSettingsPage&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/WORKSPACES/WORKSPACES/TatakelolaKesMas/tatakelolakesmas.client/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "/home/oxygen/.config/JetBrains/Rider2024.1/resharper-host/DecompilerCache",
-      "/home/oxygen/.config/JetBrains/Rider2024.1/resharper-host/SourcesCache",
-      "/home/oxygen/.local/share/Symbols/src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/home/oxygen/.config/JetBrains/Rider2024.1/resharper-host/DecompilerCache&quot;,
+      &quot;/home/oxygen/.config/JetBrains/Rider2024.1/resharper-host/SourcesCache&quot;,
+      &quot;/home/oxygen/.local/share/Symbols/src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.TatakelolaKesMas.Server: https">
     <configuration name="QuickApp.Server: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/QuickApp.Server/QuickApp.Server.csproj" />
@@ -198,6 +272,11 @@
       <workItem from="1719888957631" duration="21665000" />
       <workItem from="1720056180504" duration="4157000" />
       <workItem from="1720062742105" duration="15569000" />
+      <workItem from="1720163380756" duration="3398000" />
+      <workItem from="1720214613363" duration="3951000" />
+      <workItem from="1720319765815" duration="2452000" />
+      <workItem from="1720340983323" duration="34436000" />
+      <workItem from="1720516627255" duration="6254000" />
     </task>
     <task id="LOCAL-00001" summary="use postgresql">
       <option name="closed" value="true" />
@@ -278,17 +357,48 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Items/ItemService.cs</url>
-          <line>29</line>
-          <properties documentPath="$PROJECT_DIR$/TatakelolaKesMas.Core/Services/Items/ItemService.cs" containingFunctionPresentation="Method 'GetListItems'">
+          <url>file://$PROJECT_DIR$/TatakelolaKesMas.Server/Controllers/ItemController.cs</url>
+          <line>53</line>
+          <properties documentPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Controllers/ItemController.cs" containingFunctionPresentation="Method 'AddItem'">
             <startOffsets>
-              <option value="926" />
+              <option value="1668" />
             </startOffsets>
             <endOffsets>
-              <option value="979" />
+              <option value="1701" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="12" />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/TatakelolaKesMas.Server/Controllers/AuthorizationController.cs</url>
+          <line>101</line>
+          <properties documentPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Controllers/AuthorizationController.cs" containingFunctionPresentation="Method 'GetForbidResult'">
+            <startOffsets>
+              <option value="4409" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4697" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/TatakelolaKesMas.Server/Controllers/AuthorizationController.cs</url>
+          <line>130</line>
+          <properties documentPath="$PROJECT_DIR$/TatakelolaKesMas.Server/Controllers/AuthorizationController.cs" containingFunctionPresentation="Method 'GetDestinations'">
+            <startOffsets>
+              <option value="5818" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5844" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/tatakelolakesmas.client/src/app/components/public-health-center/public-health-center.component.ts</url>
+          <line>84</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

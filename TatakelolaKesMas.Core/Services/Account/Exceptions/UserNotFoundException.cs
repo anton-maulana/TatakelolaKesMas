@@ -4,7 +4,7 @@
 // (c) 2024 www.ebenmonney.com/mit-license
 // ---------------------------------------
 
-namespace TatakelolaKesMas.Core.Services.Account
+namespace TatakelolaKesMas.Core.Services.Account.Exceptions
 {
     /// <summary>
     /// The exception that is thrown when an attempt to access a particular User Account fails.

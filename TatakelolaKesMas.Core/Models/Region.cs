@@ -7,8 +7,9 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Model.Common;
+using TatakelolaKesMas.Core.Helpers;
 
-namespace TatakelolaKesMas.Core.Models.Shop
+namespace TatakelolaKesMas.Core.Models
 {
     public class Region : BaseEntity<string>
     {
@@ -19,8 +20,9 @@ namespace TatakelolaKesMas.Core.Models.Shop
         
         public RegionType Type { get; set; }
         
-        [ForeignKey("Parent")]
-        public string? fkParentId { get; set; }
-        public virtual Region Parent { get; set; }
+        [NotImported]
+        [ForeignKey("FkParentId")]
+        public virtual Region? Parent { get; set; }
+        public string? FkParentId { get; set; }
     }
 }

@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using TatakelolaKesMas.Core.Infrastructure;
 using TatakelolaKesMas.Core.Models.Account;
+using TatakelolaKesMas.Core.Services.Account.Interfaces;
 
 namespace TatakelolaKesMas.Core.Services.Account
 {
@@ -91,11 +92,11 @@ namespace TatakelolaKesMas.Core.Services.Account
         public async Task<(bool Succeeded, string[] Errors)> CreateUserAsync(ApplicationUser user,
             IEnumerable<string> roles, string password)
         {
-            var regionExists = await _context.Regions.AnyAsync(r => r.Id == user.FkRegionId);
-            if (!regionExists)
-            {
-                throw new Exception($"Region with ID {user.FkRegionId} does not exist.");
-            }
+            // var regionExists = await _context.Regions.AnyAsync(r => r.Id == user.FkRegionId);
+            // if (!regionExists)
+            // {
+            //     throw new Exception($"Region with ID {user.FkRegionId} does not exist.");
+            // }
             
             var result = await _userManager.CreateAsync(user, password);
             if (!result.Succeeded)
@@ -191,17 +192,17 @@ namespace TatakelolaKesMas.Core.Services.Account
             return true;
         }
 
-        public async Task<(bool Success, string[] Errors)> TestCanDeleteUserAsync(string userId)
-        {
-            var errors = new List<string>();
-
-            if (await _context.Orders.Where(o => o.CashierId == userId).AnyAsync())
-                errors.Add("User has associated orders");
-
-            //canDelete = !await ; //Do other tests...
-
-            return (errors.Count == 0, errors.ToArray());
-        }
+        // public async Task<(bool Success, string[] Errors)> TestCanDeleteUserAsync(string userId)
+        // {
+        //     var errors = new List<string>();
+        //
+        //     if (await _context.Orders.Where(o => o.CashierId == userId).AnyAsync())
+        //         errors.Add("User has associated orders");
+        //
+        //     //canDelete = !await ; //Do other tests...
+        //
+        //     return (errors.Count == 0, errors.ToArray());
+        // }
 
         public async Task<(bool Succeeded, string[] Errors)> DeleteUserAsync(string userId)
         {

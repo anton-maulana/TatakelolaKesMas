@@ -54,11 +54,11 @@ namespace TatakelolaKesMas.Core.Models.Account
         /// <summary>
         /// Navigation property for the users in this role.
         /// </summary>
-        public ICollection<IdentityUserRole<string>> Users { get; } = new List<IdentityUserRole<string>>();
+        public virtual ICollection<IdentityUserRole<string>> Users { get; } = new List<IdentityUserRole<string>>();
 
         /// <summary>
         /// Navigation property for claims in this role.
         /// </summary>
-        public ICollection<IdentityRoleClaim<string>> Claims { get; } = new List<IdentityRoleClaim<string>>();
+        public virtual ICollection<IdentityRoleClaim<string>> Claims { get; } = new List<IdentityRoleClaim<string>>();
     }
 }

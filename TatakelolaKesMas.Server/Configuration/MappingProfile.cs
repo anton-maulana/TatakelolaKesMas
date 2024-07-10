@@ -6,9 +6,11 @@
 
 using AutoMapper;
 using Microsoft.AspNetCore.Identity;
+using TatakelolaKesMas.Core.Models;
 using TatakelolaKesMas.Core.Models.Account;
 using TatakelolaKesMas.Core.Models.Shop;
 using TatakelolaKesMas.Core.Services.Account;
+using TatakelolaKesMas.Server.ViewModels.ItemReference;
 using TatakelolaKesMas.ViewModels.Account;
 using TatakelolaKesMas.ViewModels.Shop;
 
@@ -54,11 +56,7 @@ namespace TatakelolaKesMas.Server.Configuration
             CreateMap<Customer, CustomerVM>()
                 .ReverseMap();
 
-            CreateMap<Product, ProductVM>()
-                .ReverseMap();
-
-            CreateMap<Order, OrderVM>()
-                .ReverseMap();
+            CreateMap<ItemReference, ItemVM>();
         }
     }
 }

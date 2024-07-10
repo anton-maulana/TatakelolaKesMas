@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using TatakelolaKesMas.Core.Models.Account;
 using TatakelolaKesMas.Core.Services.Account;
+using TatakelolaKesMas.Core.Services.Account.Exceptions;
+using TatakelolaKesMas.Core.Services.Account.Interfaces;
 using TatakelolaKesMas.Server.Authorization;
 using TatakelolaKesMas.ViewModels.Account;
 
@@ -276,13 +278,13 @@ namespace TatakelolaKesMas.Controllers
             if (appUser == null)
                 return NotFound(id);
 
-            var canDelete = await _userAccountService.TestCanDeleteUserAsync(id);
-            if (!canDelete.Success)
-            {
-                AddModelError($"User \"{appUser.UserName}\" cannot be deleted at this time. " +
-                    "Delete the associated records and try again.");
-                AddModelError(canDelete.Errors, "Records");
-            }
+            // var canDelete = await _userAccountService.TestCanDeleteUserAsync(id);
+            // if (!canDelete.Success)
+            // {
+            //     AddModelError($"User \"{appUser.UserName}\" cannot be deleted at this time. " +
+            //         "Delete the associated records and try again.");
+            //     AddModelError(canDelete.Errors, "Records");
+            // }
 
             if (ModelState.IsValid)
             {

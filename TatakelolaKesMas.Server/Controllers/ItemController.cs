@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using TatakelolaKesMas.Core.Models;
 using TatakelolaKesMas.Core.Services;
 using TatakelolaKesMas.Core.Services.Items;
+using TatakelolaKesMas.Core.Services.Items.Interfaces;
 using TatakelolaKesMas.Core.Services.Shop;
 using TatakelolaKesMas.Services.Email;
 using TatakelolaKesMas.ViewModels.Shop;
